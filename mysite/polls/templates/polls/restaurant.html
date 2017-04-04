@@ -1,0 +1,241 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Food delivery System</title>
+    <meta name="description" content="" />
+    {% load static %}
+    <link href="{% static 'polls/css/nouislider.min.css' %}" rel="stylesheet">
+
+    {% load static %}
+    <link href="{% static 'polls/css/bootstrap.min.css' %}" rel="stylesheet">
+    {% load static %}
+    <link href="{% static 'polls/css/style.css' %}" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header class="container-fluid header-background">
+        <div class="row">
+            <nav class="navbar navbar-default wakis-nav">
+                <div class="container">
+
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <i class="material-icons">menu</i>
+                        </button>
+                        <a class="navbar-brand" href="#" >Online <span>Food Order</span></a></a>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="/polls/login_check/">Home</a></li>
+                            <li><a href="/polls/track/">Track Orders</a></li>
+                            <li><a href="/polls/">Sign Out</a></li>
+                            <li><a href="/polls/cart"><i class="material-icons">shopping_basket</i> {{cart_items_count}} Items</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+        </div>
+
+        <div class="row text-center">
+            <div class="col-sm-6 ">
+                 <div class="row">
+                    <div class="col-xs-12">
+                        <div class="input-group search-bar">
+                            <input type="search" class="form-control input-lg" placeholder="Type a Location or Restaurant or Food">
+                            <span class="input-group-btn">
+                                <button class="btn btn-lg btn-default" type="button"><i class="material-icons">search</i></button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+
+
+        <div class="row text-center">
+            <div class="col-sm-6 col-sm-offset-3">
+                <div class="row">
+                    <div class="text-center col-xs-12 text-shadow text-uppercase">
+                        <h3 class="bold">{{rest_obj.r_name}}</h3>
+                        <p>{{rest_obj.r_address}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="wrap">
+            <div class="container">
+                <div class="row top-30">
+                {% if added %}
+                    <div class="text-center">
+                    <h4 class="bold no-top-margin">Added to Cart</h4>
+                    </div>
+                {% endif %}
+                    <div class="col-sm-12 pad-0-45 down-30">
+                        <div class="row white-back-grey-border">
+                            <div class="col-xs-12 pad-0">
+                                <div>
+                                    <!-- Nav tabs -->
+                                    <ul class="nav nav-tabs light-grey-back restaurant-tab" role="tablist">
+                                        <li role="presentation" class="active"><a href="#menu" aria-controls="menu" role="tab" data-toggle="tab">Menu</a></li>
+                                        <li role="presentation"><a href="#reviews" aria-controls="reviews" role="tab" data-toggle="tab">Reviews</a></li>
+                                    </ul>
+                                    <!-- Tab panes -->
+                                    <div class="tab-content">
+                                        <div role="tabpanel" class="tab-pane active" id="menu">
+                                            <div>
+                                        {%if item_list %} 
+                                            {% for rr in item_list %}
+
+                                                <div class="pad-15">
+                                                    <div class="row pad-15 food-menu">
+                                                        <div class="col-sm-8 border-right">
+                                                            <div class="row">
+                                                                <div class="col-sm-5 text-center food-img">
+                                                                    <img src="{{rr.img_url}}" class="img img-responsive" />
+                                                                </div>
+                                                                <div class="col-sm-3">
+                                                                    <h3 class="bold">
+                                                                        {{rr.i_name}}
+                                                                    </h3>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-4 ">
+                                                            <h3 class="bold">
+                                                                Price : {{rr.i_cost}}
+                                                            </h3>
+                                                            
+                                                        </div>
+                                                        <div class="col-sm-2 text-center v-middle">
+                                                        <a href="/polls/food_by_rest/{{rest_obj.r_id}}/added/{{rr.i_id}}" class="btn btn-sm btn-primary text-uppercase ">ADD TO CART</a>
+                                                        
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            {% endfor %}
+                                        {% else %}
+                                            <p> No food available in this restaurant</p>
+                                        {% endif %}
+                                            </div>
+                              
+                                        </div>
+
+                                        <div role="tabpanel" class="tab-pane" id="reviews">
+                                            <div class="col-xs-12">
+                                                <div class="row pad-15">
+                                                    <div class="col-xs-12">
+                                                        <div class="row">
+                                                            <div class="col-xs-12 light-grey-back">
+                                                                <div class="row">
+                                                                    <div class="col-xs-12">
+                                                                        <h4>Review 1 <span><i class="material-icons star-gold">star</i><i class="material-icons star-gold">star</i><i class="material-icons star-gold">star</i><i class="material-icons star-gold">star</i><i class="material-icons star-grey">star</i></span></h4>
+                                                                    </div>
+                                                                </div>
+                                                               
+                                                                    <div class="col-xs-12">
+                                                                        <hr class="grey-hr-border" />
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="row">
+                                                                    <div class="col-sm-6 rev-cat bold">
+                                                                        Insane!
+                                                                    </div>
+                                                                    <div class="col-sm-6 rev-cat">
+                                                                        2 months ago
+                                                                    </div>
+                                                                    
+                                                                </div>
+
+                                                                <div class="row">
+                                                                    <div class="col-xs-12">
+                                                                        <hr class="grey-hr-border" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+
+
+                                                            <div class="col-xs-12 light-grey-back">
+                                                                <div class="row">
+                                                                    <div class="col-xs-12">
+                                                                        <h4>Review 2 <span><i class="material-icons star-gold">star</i><i class="material-icons star-gold">star</i><i class="material-icons star-gold">star</i><i class="material-icons star-grey">star</i><i class="material-icons star-grey">star</i></span></h4>
+                                                                    </div>
+                                                                </div>
+                                                               
+                                                                <div class="row">
+                                                                    <div class="col-xs-12">
+                                                                        <hr class="grey-hr-border" />
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="row">
+                                                                    <div class="col-sm-6 rev-cat bold">
+                                                                        review text 2(populate these from api)
+                                                                    </div>
+                                                                    <div class="col-sm-6 rev-cat">
+                                                                        3 years ago(populate this also from api)
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="row">
+                                                                    <div class="col-xs-12">
+                                                                        <hr class="grey-hr-border" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                       
+
+
+
+                                                                
+                                                            </div>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    {% load static %}
+    <script type="text/javascript" src="{% static 'polls/slick/slick.min.js' %}"></script>
+    
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    {% load static %}
+    <script src="{% static 'polls/js/bootstrap.min.js' %}"></script>
+
+
+
+    <!-- Slider -->
+    
+</body>
+</html>

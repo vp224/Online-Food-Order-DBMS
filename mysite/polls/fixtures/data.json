@@ -1,0 +1,1016 @@
+[
+  {
+    "model": "polls.City",
+    "pk": 1,
+    "fields": {
+      "city_name": "Delhi NCR"	
+    }
+  },
+  {
+    "model": "polls.City",
+    "pk": 2,
+    "fields": {
+      "city_name": "Kolkata"	
+    }
+  },
+  {
+    "model": "polls.City",
+    "pk": 3,
+    "fields": {
+      "city_name": "Mumbai"	
+    }
+  },
+  {
+    "model": "polls.City",
+    "pk": 4,
+    "fields": {
+      "city_name": "Bangalore"	
+    }
+  },
+  {
+    "model": "polls.City",
+    "pk": 5,
+    "fields": {
+      "city_name": "Pune"	
+    }
+  },
+  {
+    "model": "polls.City",
+    "pk": 6,
+    "fields": {
+      "city_name": "Hyderabad NCR"	
+    }
+  },
+  {
+    "model": "polls.City",
+    "pk": 7,
+    "fields": {
+      "city_name": "Chennai"	
+    }
+  },
+  {
+    "model": "polls.City",
+    "pk": 8,
+    "fields": {
+      "city_name": "Lucknow"	
+    }
+  },
+  {
+    "model": "polls.City",
+    "pk": 9,
+    "fields": {
+      "city_name": "Kochi"	
+    }
+  },
+  {
+    "model": "polls.City",
+    "pk": 10,
+    "fields": {
+      "city_name": "Jaipur"	
+    }
+  },
+  {
+    "model": "polls.City",
+    "pk": 11,
+    "fields": {
+      "city_name": "Ahmedabad"	
+    }
+  },
+  {
+    "model": "polls.City",
+    "pk": 12,
+    "fields": {
+      "city_name": "Kharagpur"	
+    }
+  },
+  {
+    "model": "polls.Customer",
+    "pk": 1,
+    "fields": {
+      "u_name": "Basava",
+      "u_address": "E402 Azad",
+      "u_mobile": 933979323 ,
+      "u_city": "Kolkata",
+      "u_email": "basava726.k@gmail.com",
+      "u_password": "bas",
+      "u_latest_cart_id": 0	
+    }
+  },
+  {
+    "model": "polls.Customer",
+    "pk": 2,
+    "fields": {
+      "u_name": "Vp",
+      "u_address": "LBS",
+      "u_mobile": 933937151 ,
+      "u_city": "Mumbai",
+      "u_email": "vp@gmail.com",
+      "u_password": "bas",
+      "u_latest_cart_id": 0	
+    }
+  },
+  {
+    "model": "polls.Customer",
+    "pk": 3,
+    "fields": {
+      "u_name": "Akhil",
+      "u_address": "LBS",
+      "u_mobile": 933988050 ,
+      "u_city": "Delhi NCR",
+      "u_email": "akhil@gmail.com",
+      "u_password": "bas",
+      "u_latest_cart_id": 0	
+    }
+  },
+  {
+    "model": "polls.Customer",
+    "pk": 4,
+    "fields": {
+      "u_name": "Rick",
+      "u_address": "Rk",
+      "u_mobile": 933982080 ,
+      "u_city": "Pune",
+      "u_email": "rick@gmail.com",
+      "u_password": "bas",
+      "u_latest_cart_id": 0	
+    }
+  },
+  {
+    "model": "polls.Customer",
+    "pk": 5,
+    "fields": {
+      "u_name": "Sn",
+      "u_address": "Rk",
+      "u_mobile": 933930379 ,
+      "u_city": "Bangalore",
+      "u_email": "sn@gmail.com",
+      "u_password": "bas",
+      "u_latest_cart_id": 0	
+    }
+  },
+  {
+    "model": "polls.Restaurant",
+    "pk": 1,
+    "fields": {
+      "r_name": "Prankster",
+      "r_address": "Site 8-10, Sector 29, Gurgaon",
+      "r_mobile": 933930379 ,
+      "r_city": "Delhi NCR",
+      "r_email": "Prankster@gmail.com",
+      "r_password": "bas",
+      "r_rating": 3.0,
+      "img_url": "https://b.zmtcdn.com/data/pictures/4/18337894/5c8d1f1cf48de80e3d8c4f8ae888e0e4_featured_v2.jpeg"	
+    }
+  },
+  {
+    "model": "polls.Restaurant",
+    "pk": 2,
+    "fields": {
+      "r_name": "Hauz Khas Social",
+      "r_address": "9-A & 12, Hauz Khas Village, New Delhi",
+      "r_mobile": 933930379 ,
+      "r_city": "Delhi NCR",
+      "r_email": "HKS@gmail.com",
+      "r_password": "bas",
+      "r_rating": 3.0,
+      "img_url": "https://b.zmtcdn.com/data/pictures/2/308322/cf86dbd8b8ca4d40682c7713f112cc07_featured_v2.jpg"	
+    }
+  },
+  {
+    "model": "polls.Restaurant",
+    "pk": 3,
+    "fields": {
+      "r_name": "Tamasha",
+      "r_address": "28, Kasturba Gandhi Marg, Connaught Place, New Delhi",
+      "r_mobile": 933930379 ,
+      "r_city": "Delhi NCR",
+      "r_email": "Tamasha@gmail.com",
+      "r_password": "bas",
+      "r_rating": 3.0,
+      "img_url": "https://b.zmtcdn.com/data/pictures/8/18238278/5c08b8b6281efd00dcec3894dba551c5_featured_v2.jpg"	
+    }
+  },
+  {
+    "model": "polls.Restaurant",
+    "pk": 4,
+    "fields": {
+      "r_name": "Farzi Cafe",
+      "r_address": "38/39, Level 1, Block E , Inner Circle, Connaught Place, New Delhi",
+      "r_mobile": 933930379 ,
+      "r_city": "Delhi NCR",
+      "r_email": "Farzi@gmail.com",
+      "r_password": "bas",
+      "r_rating": 3.0,
+      "img_url": "https://b.zmtcdn.com/data/pictures/3/18233593/b547de994b81df6b39ac8ffd76136bfb_featured_v2.jpg"	
+    }
+  },
+  {
+    "model": "polls.Restaurant",
+    "pk": 5,
+    "fields": {
+      "r_name": "Molecule Air Bar",
+      "r_address": "4th Floor, SCO 53, Main Market, Sector 29, Gurgaon",
+      "r_mobile": 933930379 ,
+      "r_city": "Delhi NCR",
+      "r_email": "Molecule@gmail.com",
+      "r_password": "bas",
+      "r_rating": 3.0,
+      "img_url": "https://b.zmtcdn.com/data/pictures/3/18157413/2c52bcf5b4e2e276130fed24b07416ab_featured_v2.jpg"	
+    }
+  },
+  {
+    "model": "polls.Restaurant",
+    "pk": 6,
+    "fields": {
+      "r_name": "JW Kitchen - JW Marriott",
+      "r_address": "JW Marriott, 4A, J.B.S Haldane Avenue, Science City Area, Kolkata",
+      "r_mobile": 933930379 ,
+      "r_city": "Kolkata",
+      "r_email": "JW@gmail.com",
+      "r_password": "bas",
+      "r_rating": 3.0,
+      "img_url": "https://b.zmtcdn.com/data/pictures/0/18398880/5f47136deb48c35d1b248308454d54a5_featured_v2.jpg"	
+    }
+  },
+  {
+    "model": "polls.Restaurant",
+    "pk": 7,
+    "fields": {
+      "r_name": "Peter Cat",
+      "r_address": "18A, Park Street, Park Street Area, Kolkata",
+      "r_mobile": 933930379 ,
+      "r_city": "Kolkata",
+      "r_email": "Peter@gmail.com",
+      "r_password": "bas",
+      "r_rating": 3.0,
+      "img_url": "https://b.zmtcdn.com/data/pictures/4/20404/c46422afc522370cdce81a412a9cdbe5_featured_v2.jpg"	
+    }
+  },
+  {
+    "model": "polls.Restaurant",
+    "pk": 8,
+    "fields": {
+      "r_name": "Barbeque Nation",
+      "r_address": "K1, RDB Boulevard, Block EP & GP, Sector 5, Salt Lake",
+      "r_mobile": 933930379 ,
+      "r_city": "Kolkata",
+      "r_email": "BBQ@gmail.com",
+      "r_password": "bas",
+      "r_rating": 3.0,
+      "img_url": "https://b.zmtcdn.com/data/pictures/chains/2/20842/b53d903894e2fe2e49ca0e8671e40546_featured_v2.jpg"	
+    }
+  },
+  {
+    "model": "polls.Restaurant",
+    "pk": 9,
+    "fields": {
+      "r_name": "What's Up",
+      "r_address": "122A, Southern Avenue, Kolkata",
+      "r_mobile": 933930379 ,
+      "r_city": "Kolkata",
+      "r_email": "WU@gmail.com",
+      "r_password": "bas",
+      "r_rating": 3.0,
+      "img_url": "https://b.zmtcdn.com/data/pictures/5/18017615/2161c22b7f6d739f29dad73b82877d32_featured_v2.jpg"	
+    }
+  },
+  {
+    "model": "polls.Restaurant",
+    "pk": 10,
+    "fields": {
+      "r_name": "6 Ballygunge Place",
+      "r_address": "6, Ballygunge Place, Ballygunge, Kolkata",
+      "r_mobile": 933930379 ,
+      "r_city": "Kolkata",
+      "r_email": "BP@gmail.com",
+      "r_password": "bas",
+      "r_rating": 3.0,
+      "img_url": "https://b.zmtcdn.com/data/pictures/2/20002/030e968ac3c0f86e37439b1e408675c4_featured_v2.jpg"	
+    }
+  },
+  {
+    "model": "polls.Menu",
+    "pk": 1,
+    "fields":{
+
+    }
+  },
+  {
+    "model": "polls.Menu",
+    "pk": 2,
+    "fields":{
+    	
+    }
+  },
+  {
+    "model": "polls.Menu",
+    "pk": 3,
+    "fields":{
+    	
+    }
+  },
+  {
+    "model": "polls.Menu",
+    "pk": 4,
+    "fields":{
+    	
+    }
+  },
+  {
+    "model": "polls.Cuisine",
+    "pk": 1,
+    "fields": {
+      "cuisine_name": "American"	
+    }
+  },
+  {
+    "model": "polls.Cuisine",
+    "pk": 2,
+    "fields": {
+      "cuisine_name": "Arabian"	
+    }
+  },
+  {
+    "model": "polls.Cuisine",
+    "pk": 3,
+    "fields": {
+      "cuisine_name": "Biryani"	
+    }
+  },
+  {
+    "model": "polls.Cuisine",
+    "pk": 4,
+    "fields": {
+      "cuisine_name": "Bakery"	
+    }
+  },
+  {
+    "model": "polls.Cuisine",
+    "pk": 5,
+    "fields": {
+      "cuisine_name": "Bar Food"	
+    }
+  },
+  {
+    "model": "polls.Cuisine",
+    "pk": 6,
+    "fields": {
+      "cuisine_name": "Cafe"	
+    }
+  },
+  {
+    "model": "polls.Cuisine",
+    "pk": 7,
+    "fields": {
+      "cuisine_name": "Continental"	
+    }
+  },
+  {
+    "model": "polls.Cuisine",
+    "pk": 8,
+    "fields": {
+      "cuisine_name": "Desserts"	
+    }
+  },
+  {
+    "model": "polls.Cuisine",
+    "pk": 9,
+    "fields": {
+      "cuisine_name": "Fast Foods"	
+    }
+  },
+  {
+    "model": "polls.Cuisine",
+    "pk": 10,
+    "fields": {
+      "cuisine_name": "Hyderabadi"	
+    }
+  },
+  {
+    "model": "polls.Cuisine",
+    "pk": 11,
+    "fields": {
+      "cuisine_name": "North-Indian"	
+    }
+  },
+  {
+    "model": "polls.Restaurant_Menu",
+    "pk": 1,
+    "fields": {
+      "menu_id": 2,
+      "restaurant": 1	
+    }
+  },
+  {
+    "model": "polls.Restaurant_Menu",
+    "pk": 2,
+    "fields": {
+      "menu_id": 4,
+      "restaurant": 2	
+    }
+  },
+  {
+    "model": "polls.Restaurant_Menu",
+    "pk": 3,
+    "fields": {
+      "menu_id": 3,
+      "restaurant": 3	
+    }
+  },
+  {
+    "model": "polls.Restaurant_Menu",
+    "pk": 4,
+    "fields": {
+      "menu_id": 4,
+      "restaurant": 4	
+    }
+  },
+  {
+    "model": "polls.Restaurant_Menu",
+    "pk": 5,
+    "fields": {
+      "menu_id": 3,
+      "restaurant": 5	
+    }
+  },
+  {
+    "model": "polls.Restaurant_Menu",
+    "pk": 6,
+    "fields": {
+      "menu_id": 1,
+      "restaurant": 6	
+    }
+  },
+  {
+    "model": "polls.Restaurant_Menu",
+    "pk": 7,
+    "fields": {
+      "menu_id": 1,
+      "restaurant": 7	
+    }
+  },
+  {
+    "model": "polls.Restaurant_Menu",
+    "pk": 8,
+    "fields": {
+      "menu_id": 3,
+      "restaurant": 8	
+    }
+  },
+  {
+    "model": "polls.Restaurant_Menu",
+    "pk": 9,
+    "fields": {
+      "menu_id": 2,
+      "restaurant": 9	
+    }
+  },
+  {
+    "model": "polls.Restaurant_Menu",
+    "pk": 10,
+    "fields": {
+      "menu_id": 4,
+      "restaurant": 10	
+    }
+  },
+  {
+    "model": "polls.Item",
+    "pk": 1,
+    "fields": {
+      "i_name": "Turkey",
+      "i_cost": 450,
+      "i_cuisine_id": 1,
+      "img_url": "http://russellfoodgroup.co.uk/wp-content/uploads/2015/07/Roasted-Turkey-04-Russell-Food-Gruhe.png"	
+    }
+  },
+  {
+    "model": "polls.Item",
+    "pk": 2,
+    "fields": {
+      "i_name": "Chicken Fried Steak",
+      "i_cost": 560,
+      "i_cuisine_id": 1,
+      "img_url": "http://food.fnr.sndimg.com/content/dam/images/food/fullset/2006/6/26/0/ea1004_country_fried_steak2.jpg.rend.hgtvcom.616.462.jpeg"	
+    }
+  },
+  {
+    "model": "polls.Item",
+    "pk": 3,
+    "fields": {
+      "i_name": "Filet of Sole",
+      "i_cost": 560,
+      "i_cuisine_id": 1,
+      "img_url": "https://i.ytimg.com/vi/h6U2XWewlC4/maxresdefault.jpg"	
+    }
+  },
+  {
+    "model": "polls.Item",
+    "pk": 4,
+    "fields": {
+      "i_name": "Fried Prawns",
+      "i_cost": 590,
+      "i_cuisine_id": 1,
+      "img_url": "http://www.wizardrecipes.com/wp-content/uploads/2012/06/FRIED-PRAWNS.jpg"	
+    }
+  },
+  {
+    "model": "polls.Item",
+    "pk": 5,
+    "fields": {
+      "i_name": "Chicken Tagine",
+      "i_cost": 390,
+      "i_cuisine_id": 2,
+      "img_url": "http://3.bp.blogspot.com/-KzCoxuFspOM/Ujen_o7utcI/AAAAAAAAcGM/buwEycNtSbY/s1600/Screen+Shot+2013-09-16+at+7.52.45+PM.png"	
+    }
+  },
+  {
+    "model": "polls.Item",
+    "pk": 6,
+    "fields": {
+      "i_name": "Fried Chicken Couscous",
+      "i_cost": 410,
+      "i_cuisine_id": 2,
+      "img_url": "https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe_images/recipe-image-legacy-id--513730_11.jpg?itok=Furrp2s5"	
+    }
+  },
+  {
+    "model": "polls.Item",
+    "pk": 7,
+    "fields": {
+      "i_name": "Chicken Dum Biryani",
+      "i_cost": 300,
+      "i_cuisine_id": 3,
+      "img_url": "http://theorybrew.com/wp/wp-content/uploads/2016/01/hyderabadi-chicken-dum-biryani.jpg"	
+    }
+  },
+  {
+    "model": "polls.Item",
+    "pk": 8,
+    "fields": {
+      "i_name": "Hyderabadi Dum Biryani",
+      "i_cost": 310,
+      "i_cuisine_id": 3,
+      "img_url": "https://i.ytimg.com/vi/iJUdcbCoIcA/maxresdefault.jpg"	
+    }
+  },
+  {
+    "model": "polls.Item",
+    "pk": 9,
+    "fields": {
+      "i_name": "Mutton Biryani",
+      "i_cost": 450,
+      "i_cuisine_id":3 ,
+      "img_url": "https://i.ytimg.com/vi/AR7wW9jNLcw/maxresdefault.jpg"	
+    }
+  },
+  {
+    "model": "polls.Item",
+    "pk": 10,
+    "fields": {
+      "i_name": "Vegetable Biryani",
+      "i_cost": 250,
+      "i_cuisine_id": 3,
+      "img_url": "http://mallikascookery.com/wp-content/uploads/2016/03/Veg-Biryani-1024x577.jpg"	
+    }
+  },
+  {
+    "model": "polls.Item",
+    "pk": 11,
+    "fields": {
+      "i_name": "Chocolate Pastry",
+      "i_cost": 100,
+      "i_cuisine_id": 4,
+      "img_url": "https://i.ytimg.com/vi/LH9cFkRSlSg/maxresdefault.jpg"	
+    }
+  },
+  {
+    "model": "polls.Item",
+    "pk": 12,
+    "fields": {
+      "i_name": "Egg Roll",
+      "i_cost": 50,
+      "i_cuisine_id": 4,
+      "img_url": "http://4.bp.blogspot.com/-59uk4CFHLyk/TfEUJbWOKGI/AAAAAAAABos/QUO9fOjXPzA/s1600/egg+puffs1.JPG"	
+    }
+  },
+  {
+    "model": "polls.Item",
+    "pk": 13,
+    "fields": {
+      "i_name": "Kingfisher Vodka 700ml",
+      "i_cost": 710,
+      "i_cuisine_id": 5,
+      "img_url": "https://i2.wp.com/files.hungryforever.com/wp-content/uploads/2016/01/09115120/Vodka.jpg?w=800&quality=80&strip=all"	
+    }
+  },
+  {
+    "model": "polls.Item",
+    "pk": 14,
+    "fields": {
+      "i_name": "Royal Stag Whisky 700ml",
+      "i_cost": 510,
+      "i_cuisine_id": 5,
+      "img_url": "http://wine-pricelist.com/wp-content/uploads/2013/04/royal-stag1.jpg"	
+    }
+  },
+  {
+    "model": "polls.Item",
+    "pk": 15,
+    "fields": {
+      "i_name": "Egg Manchurian",
+      "i_cost": 230,
+      "i_cuisine_id": 5,
+      "img_url": "https://i.ytimg.com/vi/ZdUMd0dXRGM/maxresdefault.jpg"	
+    }
+  },
+  {
+    "model": "polls.Item",
+    "pk": 16,
+    "fields": {
+      "i_name": "Cappuccino",
+      "i_cost": 50,
+      "i_cuisine_id": 6,
+      "img_url": "http://www.super-espresso.com/wp-content/uploads/2016/09/Cappuccino.jpg"	
+    }
+  },
+  {
+    "model": "polls.Item",
+    "pk": 17,
+    "fields": {
+      "i_name": "Grilled Chicken Salad",
+      "i_cost": 120,
+      "i_cuisine_id": 7,
+      "img_url": "http://www.wish-bone.com/wp-content/uploads/2013/11/GrilledChickenSaladVinaigrette.jpg"	
+    }
+  },
+  {
+    "model": "polls.Item",
+    "pk": 18,
+    "fields": {
+      "i_name": "Rasgulla",
+      "i_cost": 100,
+      "i_cuisine_id": 8,
+      "img_url": "https://i.ytimg.com/vi/tBa90g_KA9w/maxresdefault.jpg"	
+    }
+  },
+  {
+    "model": "polls.Item",
+    "pk": 19,
+    "fields": {
+      "i_name": "Samosa",
+      "i_cost": 50,
+      "i_cuisine_id": 9,
+      "img_url": "https://i.ytimg.com/vi/iIVJN0Yz1Y0/maxresdefault.jpg"	
+    }
+  },
+  {
+    "model": "polls.Item",
+    "pk": 20,
+    "fields": {
+      "i_name": "Hyderabadi Chicken Biryani",
+      "i_cost": 390,
+      "i_cuisine_id": 10,
+      "img_url": "http://evergreenrecipes.com/wp-content/uploads/2015/08/P1010014-5.jpg"	
+    }
+  },
+  {
+    "model": "polls.Item",
+    "pk": 21,
+    "fields": {
+      "i_name": "Hyderabadi Mutton Biryani",
+      "i_cost": 400,
+      "i_cuisine_id": 10,
+      "img_url": "https://i.ytimg.com/vi/eAzNaPDwD0c/maxresdefault.jpg"	
+    }
+  },
+  {
+    "model": "polls.Item",
+    "pk": 22,
+    "fields": {
+      "i_name": "North Indian Meals",
+      "i_cost": 150,
+      "i_cuisine_id": 11,
+      "img_url": "http://farm4.staticflickr.com/3794/10867652645_e7886094cc_o.jpg"	
+    }
+  },
+  {
+    "model": "polls.Menu_Item",
+    "pk": 1,
+    "fields": {
+      "menu_id": 1,
+      "item_id": 1	
+    }
+  },
+  {
+    "model": "polls.Menu_Item",
+    "pk": 2,
+    "fields": {
+      "menu_id": 1,
+      "item_id": 3	
+    }
+  },
+  {
+    "model": "polls.Menu_Item",
+    "pk": 3,
+    "fields": {
+      "menu_id": 1,
+      "item_id": 6	
+    }
+  },
+  {
+    "model": "polls.Menu_Item",
+    "pk": 4,
+    "fields": {
+      "menu_id": 1,
+      "item_id": 10	
+    }
+  },
+  {
+    "model": "polls.Menu_Item",
+    "pk": 5,
+    "fields": {
+      "menu_id": 1,
+      "item_id": 15	
+    }
+  },
+  {
+    "model": "polls.Menu_Item",
+    "pk": 6,
+    "fields": {
+      "menu_id": 1,
+      "item_id": 19	
+    }
+  },
+  {
+    "model": "polls.Menu_Item",
+    "pk": 7,
+    "fields": {
+      "menu_id": 1,
+      "item_id": 22	
+    }
+  },
+  {
+    "model": "polls.Menu_Item",
+    "pk": 8,
+    "fields": {
+      "menu_id": 2,
+      "item_id": 2	
+    }
+  },
+  {
+    "model": "polls.Menu_Item",
+    "pk": 9,
+    "fields": {
+      "menu_id": 2,
+      "item_id": 4	
+    }
+  },
+  {
+    "model": "polls.Menu_Item",
+    "pk": 10,
+    "fields": {
+      "menu_id": 2,
+      "item_id": 5	
+    }
+  },
+  {
+    "model": "polls.Menu_Item",
+    "pk": 11,
+    "fields": {
+      "menu_id": 2,
+      "item_id": 8	
+    }
+  },
+  {
+    "model": "polls.Menu_Item",
+    "pk": 12,
+    "fields": {
+      "menu_id": 2,
+      "item_id": 12	
+    }
+  },
+  {
+    "model": "polls.Menu_Item",
+    "pk": 13,
+    "fields": {
+      "menu_id": 2,
+      "item_id": 14	
+    }
+  },
+  {
+    "model": "polls.Menu_Item",
+    "pk": 14,
+    "fields": {
+      "menu_id": 2,
+      "item_id": 16	
+    }
+  },
+  {
+    "model": "polls.Menu_Item",
+    "pk": 15,
+    "fields": {
+      "menu_id": 2,
+      "item_id": 17 	
+    }
+  },
+  {
+    "model": "polls.Menu_Item",
+    "pk": 16,
+    "fields": {
+      "menu_id": 2,
+      "item_id": 20	
+    }
+  },
+  {
+    "model": "polls.Menu_Item",
+    "pk": 17,
+    "fields": {
+      "menu_id": 3,
+      "item_id": 1	
+    }
+  },
+  {
+    "model": "polls.Menu_Item",
+    "pk": 18,
+    "fields": {
+      "menu_id": 3,
+      "item_id": 4	
+    }
+  },
+  {
+    "model": "polls.Menu_Item",
+    "pk": 19,
+    "fields": {
+      "menu_id": 3,
+      "item_id": 6	
+    }
+  },
+  {
+    "model": "polls.Menu_Item",
+    "pk": 20,
+    "fields": {
+      "menu_id": 3,
+      "item_id": 7	
+    }
+  },
+  {
+    "model": "polls.Menu_Item",
+    "pk": 21,
+    "fields": {
+      "menu_id": 3,
+      "item_id": 9	
+    }
+  },
+  {
+    "model": "polls.Menu_Item",
+    "pk": 22,
+    "fields": {
+      "menu_id": 3,
+      "item_id": 10	
+    }
+  },
+  {
+    "model": "polls.Menu_Item",
+    "pk": 23,
+    "fields": {
+      "menu_id": 3,
+      "item_id": 13	
+    }
+  },
+  {
+    "model": "polls.Menu_Item",
+    "pk": 24,
+    "fields": {
+      "menu_id": 3,
+      "item_id": 11	
+    }
+  },
+  {
+    "model": "polls.Menu_Item",
+    "pk": 25,
+    "fields": {
+      "menu_id": 3,
+      "item_id": 17	
+    }
+  },
+  {
+    "model": "polls.Menu_Item",
+    "pk": 26,
+    "fields": {
+      "menu_id": 3,
+      "item_id": 18 	
+    }
+  },
+  {
+    "model": "polls.Menu_Item",
+    "pk": 27,
+    "fields": {
+      "menu_id": 3,
+      "item_id": 19 	
+    }
+  },
+  {
+    "model": "polls.Menu_Item",
+    "pk": 28,
+    "fields": {
+      "menu_id": 3,
+      "item_id": 20	
+    }
+  },
+  {
+    "model": "polls.Menu_Item",
+    "pk": 29,
+    "fields": {
+      "menu_id": 4,
+      "item_id": 21 	
+    }
+  },
+  {
+    "model": "polls.Menu_Item",
+    "pk": 30,
+    "fields": {
+      "menu_id": 4,
+      "item_id": 22	
+    }
+  },
+  {
+    "model": "polls.Menu_Item",
+    "pk": 31,
+    "fields": {
+      "menu_id": 4,
+      "item_id": 16	
+    }
+  },
+  {
+    "model": "polls.Menu_Item",
+    "pk": 32,
+    "fields": {
+      "menu_id": 4,
+      "item_id": 15	
+    }
+  },
+  {
+    "model": "polls.Menu_Item",
+    "pk": 33,
+    "fields": {
+      "menu_id": 4,
+      "item_id": 14	
+    }
+  },
+  {
+    "model": "polls.Menu_Item",
+    "pk": 34,
+    "fields": {
+      "menu_id": 4,
+      "item_id": 12	
+    }
+  },
+  {
+    "model": "polls.Menu_Item",
+    "pk": 35,
+    "fields": {
+      "menu_id": 4,
+      "item_id": 10	
+    }
+  },
+  {
+    "model": "polls.Menu_Item",
+    "pk": 36,
+    "fields": {
+      "menu_id": 4,
+      "item_id": 17 	
+    }
+  },
+  {
+    "model": "polls.Menu_Item",
+    "pk": 37,
+    "fields": {
+      "menu_id": 4,
+      "item_id": 18	
+    }
+  },
+  {
+    "model": "polls.Menu_Item",
+    "pk": 38,
+    "fields": {
+      "menu_id": 4,
+      "item_id": 19	
+    }
+  },
+  {
+    "model": "polls.Menu_Item",
+    "pk": 39,
+    "fields": {
+      "menu_id": 4,
+      "item_id": 1	
+    }
+  },
+  {
+    "model": "polls.Menu_Item",
+    "pk": 40,
+    "fields": {
+      "menu_id": 4,
+      "item_id": 6	
+    }
+  }
+]

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Food delivery System</title>
+    <meta name="description" content="" />
+    {% load static %}
+    <link href="{% static 'polls/css/nouislider.min.css' %}" rel="stylesheet">
+
+
+    {% load static %}
+    <link href="{% static 'polls/css/bootstrap.min.css' %}" rel="stylesheet">
+    {% load static %}
+    <link href="{% static 'polls/css/style.css' %}" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header class="container-fluid header-background">
+        <div class="row">
+            <nav class="navbar navbar-default wakis-nav">
+                <div class="container">
+
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <i class="material-icons">menu</i>
+                        </button>
+                        <a class="navbar-brand" href="#" >Online <span>Food Order</span></a></a>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="/polls/login_check/">Home</a></li>
+                            <li><a href="/polls/track/">Track Orders</a></li>
+                            <li><a href="/polls/">Sign Out</a></li>
+                            <li><a href="/polls/cart/"><i class="material-icons">shopping_basket</i> 0 Items </span></a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+        </div>
+
+
+        <div class="row text-center">
+            <div class="col-sm-6 col-sm-offset-3">
+                <div class="row">
+                    <div class="text-center col-xs-12 text-shadow text-uppercase">
+                        <h3 class="bold">Track Order</h3>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+     <main class="main">
+        <div class="wrap">
+            <div class="container">
+                <div class="row top-30">
+
+                    <div class="col-sm-6 pad-0-30 down-30">
+                        <div class="row white-back-grey-border pad-0-15">
+                            <div class="col-xs-12 pad-0">
+                                <div class="row filter-head">
+                                    <div class="col-xs-12">
+                                        <h5 class="bold">Track Your order</h5>
+                                    </div>
+                                </div>
+
+                                <div class="row top-30">
+                                    <div class="col-xs-12">
+                                    {% if st %}
+                                        {% for s in st %}
+                                            <div class="row">
+                                                <div class="col-xs-12">
+                                                    <h4 class="bold">Order ID: #{{s.payment.payment_id}}</h4>
+                                                    <hr />
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <ul class="fa-ul cart-items">
+                                            
+                                                    {% if s.cart_contains %}
+                                                        {% for cc in s.cart_contains %}
+                                                            <li>
+                                                                <div class="row">
+                                                                    <div class="col-md-8">
+                                                                        <h5 class="bold">{{cc.item.i_name}}</h5>
+                                                                        <p> Quantity : {{cc.quan.quantity}} Restaurant : {{cc.quan.restaurant_id.r_name}}</p>
+                                                                    </div>
+                                                                    <div class="col-md-4 order-price text-right">
+                                                                    {%if cc.quan.status == "ordered" %}
+                                                                        <p class="order-active">
+                                                                        Order Received
+                                                                        <i class="material-icons">done_all</i>
+                                                                        </p>
+                                                                    {%elif cc.quan.status == "cooking"%}
+                                                                        <p class="order-in-progress">
+                                                                        Getting cooked
+                                                                        <i class="material-icons">room_service</i>
+                                                                        </p>
+                                                                    {%elif cc.quan.status == "delivering"%}
+                                                                        <p class="order-in-progress">
+                                                                        Sent for delivery
+                                                                        <i class="material-icons">motorcycle</i>
+                                                                        </p>
+                                                                    {%else%}
+                                                                        <p class="order-active">
+                                                                        Delivered<br />
+                                                                        <i class="material-icons">done_all</i>
+                                                                        </p>
+                                                                    {%endif%}
+                                                                    </div>
+                                                                </div>
+
+                                                            </li>
+                                                        {% endfor %}
+                                                    {% else %}
+                                                        <p>No Items selected</p>
+                                                    {% endif %}
+
+
+                                            
+                                                        </ul>
+                                                    </div>
+                                            </div>
+                                        {% endfor %}
+                                    {% else %}
+                                    {% endif %}
+                                        
+
+                                        
+
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <hr style="margin-top:0px;" />
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-xs-12 text-center">
+                                                <a href="/polls/login_check/" class="btn btn-warning orange-btn btn-sm text-uppercase down-30">Back</a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+
+     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    {% load static %}
+    <script src="{% static 'polls/js/bootstrap.min.js' %}"></script>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    {% load static %}
+    <script type="polls/text/javascript" src="{% static 'slick/slick.min.js' %}"></script>
+
+    <!-- Slider -->
+    
+</body>

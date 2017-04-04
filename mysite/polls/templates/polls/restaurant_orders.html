@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Food delivery System</title>
+    <meta name="description" content="" />
+    {% load static %}
+    <link href="{% static 'polls/css/nouislider.min.css' %}" rel="stylesheet">
+
+    {% load static %}
+    <link href="{% static 'polls/css/bootstrap.min.css' %}" rel="stylesheet">
+    {% load static %}
+    <link href="{% static 'polls/css/style.css' %}" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header class="container-fluid header-background">
+        <div class="row">
+            <nav class="navbar navbar-default wakis-nav">
+                <div class="container">
+
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <i class="material-icons">menu</i>
+                        </button>
+                       <a class="navbar-brand" href="#" >Online <span>Food Order</span></a></a>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="/polls/login_check/">Pending Orders</a></li>
+                            <li><a href="/polls/list_delivered_orders/">Delivered Orders</a></li>
+                            <li><a href="">Sign Out</a></li>
+                            </li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+        </div>
+
+        
+        <div class="row text-center">
+            <div class="col-sm-6 col-sm-offset-3">
+                <div class="row">
+                    <div class="text-center col-xs-12 text-shadow text-uppercase">
+                        <h3 class="bold">{{r.r_name}}</h3>
+                        <p>{{r.r_address}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+
+     <main class="main">
+        <div class="wrap">
+            <div class="container">
+                <div class="row top-30">
+                    <div class="col-sm-9 col-sm-offset-1">
+                        <div class="row">
+                            <div class="col-sm-20">
+                                <div class="row">
+                                    <div class="col-xs-12 pad-0-30">
+                                        <div class="row white-back-grey-border down-30 listing">
+                                            <div class="col-xs-12">
+                                            {%if all_orders%}
+                                                {% for ao in all_orders %}
+
+                                                    <div class="row restaurant">
+                                                        <div class="col-sm-5">
+                                                            <h4 class="bold r-name">
+                                                            Item: {{ao.cart_item.item_id.i_name}}&nbsp;&nbsp;&nbsp;
+                                                            Quantity: {{ao.cart_item.quantity}}
+                                                            </h4>
+                                                            <p class="">Order Id : #{{ao.order.order_id}}<br/>Customer name : {{ao.cust.u_name}}</p>
+                                                            <p class="text">Address : {{ao.cust.u_address}}</p>
+                                                        </div>
+                                                        {%if ao.cart_item.status == "ordered" %}
+                                                            <div class="col-sm-2 text-center v-middle">
+                                                                <a href="/polls/cook/{{ao.order.order_id}}/{{ao.cart_item.cart_item_id}}/" class="btn btn-sm btn-primary text-uppercase ">Cook</a>
+                                                        
+                                                            </div>
+                                                            <div class="col-sm-2 text-center v-middle">
+                                                                <a href="" class="btn disabled btn-sm btn-primary text-uppercase">Deliver</a>
+                                                        
+                                                            </div>
+                                                            <div class="col-sm-2 text-center v-middle">
+                                                                <a href="" class="btn disabled btn-sm btn-primary text-uppercase">Delivered</a>
+                                                        
+                                                            </div>
+                                                        {% elif ao.cart_item.status == "cooking" %}
+                                                            <div class="col-sm-2 text-center v-middle">
+                                                                <a href="" class="btn disabled btn-sm btn-primary text-uppercase ">Cook</a>
+                                                        
+                                                            </div>
+                                                            <div class="col-sm-2 text-center v-middle">
+                                                                <a href="/polls/deliver/{{ao.order.order_id}}/{{ao.cart_item.cart_item_id}}/" class="btn btn-sm btn-primary text-uppercase">Deliver</a>
+                                                        
+                                                            </div>
+                                                            <div class="col-sm-2 text-center v-middle">
+                                                                <a href="" class="btn disabled btn-sm btn-primary text-uppercase">Delivered</a>
+                                                        
+                                                            </div>
+                                                        {% elif ao.cart_item.status == "delivering" %}
+                                                            <div class="col-sm-2 text-center v-middle">
+                                                                <a href="" class="btn disabled btn-sm btn-primary text-uppercase ">Cook</a>
+                                                        
+                                                            </div>
+                                                            <div class="col-sm-2 text-center v-middle">
+                                                                <a href="" class="btn disabled btn-sm btn-primary text-uppercase">Deliver</a>
+                                                        
+                                                            </div>
+                                                            <div class="col-sm-2 text-center v-middle">
+                                                                <a href="/polls/done/{{ao.order.order_id}}/{{ao.cart_item.cart_item_id}}/" class="btn btn-sm btn-primary text-uppercase">Delivered</a>
+                                                        
+                                                            </div>
+                                                        {% else %}
+                                                            <div class="col-md-6 order-price text-right">
+                                                            <p class="order-active">
+                                                                Delivered<br />
+                                                                <i class="material-icons">done_all</i>
+                                                            </p>
+                                                            </div>
+                                                        {% endif %}
+
+                                                    </div>
+                                                {% endfor %}
+                                            {% endif %}
+
+                                                
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

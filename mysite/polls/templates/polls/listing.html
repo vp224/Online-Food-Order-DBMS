@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Food delivery System</title>
+    <meta name="description" content="" />
+    {% load static %}
+    <link href="{% static 'polls/css/nouislider.min.css' %}" rel="stylesheet">
+
+
+    {% load static %}
+    <link href="{% static 'polls/css/bootstrap.min.css' %}" rel="stylesheet">
+    {% load static %}
+    <link href="{% static 'polls/css/style.css' %}" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header class="container-fluid header-background">
+        <div class="row">
+            <nav class="navbar navbar-default wakis-nav">
+                <div class="container">
+
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <i class="material-icons">menu</i>
+                        </button>
+                       <a class="navbar-brand" href="#" >Online <span>Food Order</span></a></a>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="/polls/login_check/">Home</a></li>
+                            <li><a href="/polls/track/">Track Orders</a></li>
+                            <li><a href="/polls/">Sign Out</a></li>
+                            <li><a href="/polls/cart"><i class="material-icons">shopping_basket</i>CART  {{cart_items_count}} Items </a>
+                            </li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+        </div>
+
+        <div class="row text-center">
+            <div class="col-sm-6">
+                 <div class="row">
+                    <div class="col-xs-12">
+                        <div class="input-group search-bar">
+                            <input type="search" class="form-control input-lg" placeholder="Type a Location or Restaurant or Food">
+                            <span class="input-group-btn">
+                                <button class="btn btn-lg btn-default" type="button"><i class="material-icons">search</i></button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+
+
+    </header>
+
+     <main class="main">
+        <div class="wrap">
+            <div class="container">
+                <div class="row top-30">
+                    <div class="col-sm-3">
+                        <div class="row">
+                            <div class="col-xs-12 pad-0-30">
+                                <div class="row filter-div">
+                                    <div class="col-xs-12">
+                                        <div class="row toggle-filter">
+                                            <div class="col-xs-12">
+                                                <h5 class="text-uppercase">Use filters</h5>
+                                            </div>
+                                        </div>
+
+                                        <div class= "show-filter">
+                                            <div class="row">
+                                                <div class="col-xs-12">
+                                                    <div class="row filter-head">
+                                                        <div class="col-xs-12">
+                                                            <h5>Types of Dishes</h5>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                
+                                                    
+                                                    <div class="row">
+                                                        <div class="col-xs-12 filter-checkboxes">
+                                                        {%if cuisine_list %}
+                                                            {% for c in cuisine_list %}
+                                                            <div class="checkbox">
+                                                                <label>
+                                                                    <input type="checkbox" name="filter_category" value="Cuisine">
+                                                                    <i class="material-icons filter-checkbox">radio_button_unchecked</i> {{c.cuisine_name}}
+                                                                </label>
+                                                            </div>
+                                                            {% endfor %}
+                                                        {% endif %}
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+
+
+                                            <div class="row">
+                                                <div class="col-xs-12">
+                                                    <div class="row filter-head">
+                                                        <div class="col-xs-12">
+                                                            <h5>Reviews</h5>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-xs-12 filter-checkboxes">
+                                                            <div class="checkbox">
+                                                                <label>
+                                                                    <input type="checkbox" name="filter_category" value="Cuisine">
+                                                                    <i class="material-icons filter-checkbox">radio_button_unchecked</i> 
+                                                                    <span class="filter-rating">
+                                                                        <i class="material-icons star-gold">star</i><i class="material-icons star-grey">star</i><i class="material-icons star-grey">star</i><i class="material-icons star-grey">star</i><i class="material-icons star-grey">star</i>
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="checkbox">
+                                                                <label>
+                                                                    <input type="checkbox" name="filter_category" value="Continental">
+                                                                    <i class="material-icons filter-checkbox">radio_button_unchecked</i> 
+                                                                    <span class="filter-rating">
+                                                                        <i class="material-icons star-gold">star</i><i class="material-icons star-gold">star</i><i class="material-icons star-grey">star</i><i class="material-icons star-grey">star</i><i class="material-icons star-grey">star</i>
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="checkbox">
+                                                                <label>
+                                                                    <input type="checkbox" name="filter_category" value="Pasteries">
+                                                                    <i class="material-icons filter-checkbox">radio_button_unchecked</i> 
+                                                                    <span class="filter-rating">
+                                                                        <i class="material-icons star-gold">star</i><i class="material-icons star-gold">star</i><i class="material-icons star-gold">star</i><i class="material-icons star-grey">star</i><i class="material-icons star-grey">star</i>
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="checkbox">
+                                                                <label>
+                                                                    <input type="checkbox" name="filter_category" value="Pasta">
+                                                                    <i class="material-icons filter-checkbox">radio_button_unchecked</i> 
+                                                                    <span class="filter-rating">
+                                                                        <i class="material-icons star-gold">star</i><i class="material-icons star-gold">star</i><i class="material-icons star-gold">star</i><i class="material-icons star-gold">star</i><i class="material-icons star-grey">star</i>
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="checkbox">
+                                                                <label>
+                                                                    <input type="checkbox" name="filter_category" value="Pasta">
+                                                                    <i class="material-icons filter-checkbox">radio_button_unchecked</i>
+                                                                    <span class="filter-rating">
+                                                                        <i class="material-icons star-gold">star</i><i class="material-icons star-gold">star</i><i class="material-icons star-gold">star</i><i class="material-icons star-gold">star</i><i class="material-icons star-gold">star</i>
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-9">
+                        <div class="row">
+                            <div class="col-sm-10">
+                                <div class="row">
+                                    <div class="col-xs-12 pad-0-40">
+                                        <div class="row white-back-grey-border down-40 listing">
+                                            <div class="col-xs-12">
+                                            {% if rest_list %}
+                                                {% for rr in rest_list %}
+                                                <a href="/polls/food_by_rest/{{rr.r_id}}">
+                                                <div class="row restaurant">
+                                                    <div class="col-sm-4 text-center">
+                                                        <img src={{rr.img_url}} class="img img-responsive r-img" />
+                                                    </div>
+                                                    <div class="col-sm-7">
+                                                        <h4 class="bold r-name">{{rr.r_name}}</h4>
+                                                        <p class="">{{rr.r_address}}</p>
+                                                        <p class="rating"><i class="material-icons star-gold">star</i><i class="material-icons star-gold">star</i><i class="material-icons star-gold">star</i><i class="material-icons star-gold">star</i><i class="material-icons star-grey">star</i> {{rr.r_rating}}</p>
+
+                                                        <p class="text">{{rr.r_mobile}}</p>
+                                                    </div>
+                                                </div>
+                                                </a>
+                                                {% endfor %}
+                                            {% else %}
+                                                <p> No restaurants available for service in this place </p>
+                                            {% endif %}
+
+                                                
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    {% load static %}
+    <script src="{% static 'polls/js/jquery.countTo.js' %}"></script>
+    {% load static %}
+    <script src="{% static 'polls/js/bootstrap.min.js' %}"></script>
+    {% load static %}
+    <script src="{% static 'polls/js/nouislider.min.js' %}"></script>
+    {% load static %}
+    <script src="{% static 'polls/js/wNumb.js' %}"></script>
+    {% load static %}
+    <script src="{% static 'polls/js/jquery.jscroll.min.js' %}"></script>
+    <script type="text/javascript">
+        $(window).scroll(function () {
+            var sc = $(window).scrollTop()
+            if (sc > 50) {
+                $(".wakis-nav").addClass("fixed-header")
+            } else {
+                $(".wakis-nav").removeClass("fixed-header")
+            }
+        });
+        $('.timer').countTo();
+
+        var tooltipSlider = document.getElementsByClassName('noUi-tooltip');
+
+        $('.toggle-filter').click(function () {
+            $(this).next('.show-filter').slideToggle();
+        })
+
+        var selected = [];
+
+        $("input[name = 'filter_category']").change(function () {
+            $(this).next('.filter-checkbox').html('radio_button_unchecked');
+            $("input[name = 'filter_category']:checked").each(function () {
+                $(this).next('.filter-checkbox').html('check_box');
+            });
+            
+        });
+
+    </script>
+</body>
+</html>

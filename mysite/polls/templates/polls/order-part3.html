@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Food delivery System</title>
+    <meta name="description" content="" />
+    {% load static %}
+    <link href="{% static 'polls/css/nouislider.min.css' %}" rel="stylesheet">
+
+
+    {% load static %}
+    <link href="{% static 'polls/css/bootstrap.min.css' %}" rel="stylesheet">
+    {% load static %}
+    <link href="{% static 'polls/css/style.css' %}" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header class="container-fluid header-background">
+        <div class="row">
+            <nav class="navbar navbar-default wakis-nav">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <i class="material-icons">menu</i>
+                        </button>
+                       <a class="navbar-brand" href="#" >Online <span>Food Order</span></a></a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="/polls/login_check/">Home</a></li>
+                            <li><a href="/polls/track/">Track Orders</a></li>
+                            <li><a href="/polls/">Sign Out</a></li>
+                            <li><a href="#"><i class="material-icons">shopping_basket</i>CART  0 Items </span></a>
+                            </li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+        </div>
+
+        <div class="row text-center">
+            <div class="col-sm-4 col-sm-offset-4 text-shadow">
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h3 class="text-shadow text-uppercase">Place your order</h3>
+                    </div>
+                </div>
+
+                <div class="row order-progress">
+                    <div class="col-xs-4 bold">
+                        <i class="material-icons">check_box</i>
+                        <br />
+                        Confirm Cart
+                        <span class="progress-line-right hidden-sm hidden-xs"></span>
+                    </div>
+                    <div class="col-xs-4 bold">
+                        <span class="progress-line-left hidden-sm hidden-xs"></span>
+                        <i class="material-icons">check_box</i>
+                        <br />
+                       Pay
+                        <span class="progress-line-right hidden-sm hidden-xs"></span>
+                    </div>
+                    <div class="col-xs-4 bold">
+                        <span class="progress-line-left hidden-sm hidden-xs"></span>
+                        <i class="material-icons">check_box</i>
+                        <br />
+                       Done
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </header>
+    <main class="main">
+        <div class="wrap">
+            <div class="container">
+                <div class="row top-30">
+                    <div class="col-sm-6 pad-0-30 down-30">
+                        <div class="row white-back-grey-border pad-0-15">
+                            <div class="col-xs-12 pad-0">
+                                <div class="row filter-head">
+                                    <div class="col-xs-12">
+                                        <h5 class="bold">Order Confirmation</h5>
+                                    </div>
+                                </div>
+
+                                <div class="row top-30">
+                                    <div class="col-xs-12">
+                                        
+
+                                        <div class="row">
+                                            <div class="col-xs-12 form-checkboxes text-center">
+                                                <i class="material-icons" style="color:green; font-size:48px;">done_all</i>
+                                                
+                                                <h4 class="bold text-uppercase">CONFIRMED PAYEMENT!!</h4>
+
+        
+                                            </div>
+
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <hr style="margin-top:0px;" />
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-xs-12 text-center">
+                                                <a href="/polls/track/" class="btn btn-default text-uppercase btn-sm blue-btn-border down-30"> track order</a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                     <div class="col-sm-6 pad-0-30">
+                        <div class="row white-back-grey-border">
+                            <div class="col-xs-12">
+                                <div class="row filter-head">
+                                    <div class="col-xs-12">
+                                        <h5 class="bold">Bill </h5>
+                                    </div>
+                                </div>
+
+                                
+
+                                <div class="row">
+                                    <div class="col-xs-12 text-center">
+                                        <h4 class="bold">Order ID: #{{payment.payment_id}}</h4>
+                                        <hr />
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <ul class="fa-ul cart-items">
+                                            
+                                    {% if cart_contains %}
+                                        {% for cc in cart_contains %}
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-md-8">
+                                                        <h5 class="bold">{{cc.item.i_name}}</h5>
+                                                        <p> Quantity : {{cc.quan.quantity}} Restaurant : {{cc.quan.restaurant_id.r_name}}</p>
+                                                    </div>
+                                                    <div class="col-md-4 order-price text-right">
+                                                        {{cc.tot}}
+                                                    </div>
+                                                </div>
+
+                                            </li>
+                                        {% endfor %}
+                                    {% else %}
+                                        <p>No Items selected</p>
+                                    {% endif %}
+
+
+                                            
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xs-12 pad-0-30">
+                                        <table class="table table-condensed table-striped">
+                                        {% if tot_cost %}    
+                                            <tr>
+                                                <td class="bold">Order Total</td>
+                                                <td class="text-right">{{tot_cost}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bold">Charges</td>
+                                                <td class="text-right">100.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bold">Net Amount</td>
+                                                <td class="text-right">{{charges}}</td>
+                                            </tr>
+                                        {%else%}
+                                            <tr>
+                                                <td class="bold">Order Total</td>
+                                                <td class="text-right">0</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bold">Charges</td>
+                                                <td class="text-right">0</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bold">Net Amount</td>
+                                                <td class="text-right">0</td>
+                                            </tr>
+                                        {%endif%}
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
